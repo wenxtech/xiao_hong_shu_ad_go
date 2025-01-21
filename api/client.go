@@ -53,6 +53,10 @@ type APIClient struct {
 	JgAccountBudgetInfoAPI *JgAccountBudgetInfoAPIService
 
 	JgAccountOrderInfoAPI *JgAccountOrderInfoAPIService
+
+	JgDataReportOfflineAccountAPI *JgDataReportOfflineAccountAPIService
+
+	JgDataReportRealtimeAccountAPI *JgDataReportRealtimeAccountAPIService
     CommonApi *CommonApiService
 }
 
@@ -75,6 +79,8 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.JgAccountAdOrderInfoAPI = (*JgAccountAdOrderInfoAPIService)(&c.common)
 	c.JgAccountBudgetInfoAPI = (*JgAccountBudgetInfoAPIService)(&c.common)
 	c.JgAccountOrderInfoAPI = (*JgAccountOrderInfoAPIService)(&c.common)
+	c.JgDataReportOfflineAccountAPI = (*JgDataReportOfflineAccountAPIService)(&c.common)
+	c.JgDataReportRealtimeAccountAPI = (*JgDataReportRealtimeAccountAPIService)(&c.common)
 	c.CommonApi = (*CommonApiService)(&c.common)
 
 	return c

@@ -80,6 +80,8 @@ Class | Method | HTTP request | Description
 *JgAccountAdOrderInfoAPI* | [**JgAccountAdOrderInfoPost**](docs/JgAccountAdOrderInfoAPI.md#jgaccountadorderinfopost) | **Post** /jg/account/ad/order/info | 获取计划流水接口
 *JgAccountBudgetInfoAPI* | [**JgAccountBudgetInfoPost**](docs/JgAccountBudgetInfoAPI.md#jgaccountbudgetinfopost) | **Post** /jg/account/budget/info | 获取账户日预算余额接口
 *JgAccountOrderInfoAPI* | [**JgAccountOrderInfoPost**](docs/JgAccountOrderInfoAPI.md#jgaccountorderinfopost) | **Post** /jg/account/order/info | 获取账户流水接口
+*JgDataReportOfflineAccountAPI* | [**JgDataReportOfflineAccountPost**](docs/JgDataReportOfflineAccountAPI.md#jgdatareportofflineaccountpost) | **Post** /jg/data/report/offline/account | 账户层级离线报表数据
+*JgDataReportRealtimeAccountAPI* | [**JgDataReportRealtimeAccountPost**](docs/JgDataReportRealtimeAccountAPI.md#jgdatareportrealtimeaccountpost) | **Post** /jg/data/report/realtime/account | 账户层级实时数据
 
 
 ## Documentation For Models
@@ -97,6 +99,14 @@ Class | Method | HTTP request | Description
  - [JgAccountOrderInfoResponseData](docs/JgAccountOrderInfoResponseData.md)
  - [JgAccountOrderInfoResponseDataAccountTradeDetailInner](docs/JgAccountOrderInfoResponseDataAccountTradeDetailInner.md)
  - [JgAccountOrderInfoPostRequest](docs/JgAccountOrderInfoPostRequest.md)
+ - [JgDataReportOfflineAccountResponse](docs/JgDataReportOfflineAccountResponse.md)
+ - [JgDataReportOfflineAccountResponseData](docs/JgDataReportOfflineAccountResponseData.md)
+ - [JgDataReportOfflineAccountResponseDataAggregationData](docs/JgDataReportOfflineAccountResponseDataAggregationData.md)
+ - [JgDataReportOfflineAccountResponseDataDataListInner](docs/JgDataReportOfflineAccountResponseDataDataListInner.md)
+ - [JgDataReportOfflineAccountPostRequest](docs/JgDataReportOfflineAccountPostRequest.md)
+ - [JgDataReportRealtimeAccountResponse](docs/JgDataReportRealtimeAccountResponse.md)
+ - [JgDataReportRealtimeAccountResponseData](docs/JgDataReportRealtimeAccountResponseData.md)
+ - [JgDataReportRealtimeAccountPostRequest](docs/JgDataReportRealtimeAccountPostRequest.md)
 
 
 ## Documentation For Authorization

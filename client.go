@@ -40,6 +40,12 @@ func (c *Client) JgAccountBudgetInfoAPI() *api.JgAccountBudgetInfoAPIService {
 func (c *Client) JgAccountOrderInfoAPI() *api.JgAccountOrderInfoAPIService {
 	return c.ApiClient.JgAccountOrderInfoAPI
 }
+func (c *Client) JgDataReportOfflineAccountAPI() *api.JgDataReportOfflineAccountAPIService {
+	return c.ApiClient.JgDataReportOfflineAccountAPI
+}
+func (c *Client) JgDataReportRealtimeAccountAPI() *api.JgDataReportRealtimeAccountAPIService {
+	return c.ApiClient.JgDataReportRealtimeAccountAPI
+}
 
 func (c *Client) CommonApi() *api.CommonApiService {
 	return c.ApiClient.CommonApi
