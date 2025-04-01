@@ -20,25 +20,25 @@ import (
 )
 
 
-// JgDataReportOfflineAccountAPIService JgDataReportOfflineAccountAPI service
-type JgDataReportOfflineAccountAPIService service
+// JgHistoryListAPIService JgHistoryListAPI service
+type JgHistoryListAPIService service
 
-type ApiJgDataReportOfflineAccountPostRequest struct {
+type ApiJgHistoryListPostRequest struct {
 	ctx context.Context
-	ApiService *JgDataReportOfflineAccountAPIService
-	jgDataReportOfflineAccountPostRequest *JgDataReportOfflineAccountPostRequest
+	ApiService *JgHistoryListAPIService
+	jgHistoryListPostRequest *JgHistoryListPostRequest
 }
 
-func (r *ApiJgDataReportOfflineAccountPostRequest) JgDataReportOfflineAccountPostRequest(jgDataReportOfflineAccountPostRequest JgDataReportOfflineAccountPostRequest) *ApiJgDataReportOfflineAccountPostRequest {
-	r.jgDataReportOfflineAccountPostRequest = &jgDataReportOfflineAccountPostRequest
+func (r *ApiJgHistoryListPostRequest) JgHistoryListPostRequest(jgHistoryListPostRequest JgHistoryListPostRequest) *ApiJgHistoryListPostRequest {
+	r.jgHistoryListPostRequest = &jgHistoryListPostRequest
 	return r
 }
 
-func (r *ApiJgDataReportOfflineAccountPostRequest) Execute() (*JgDataReportOfflineAccountResponse, *http.Response, error) {
+func (r *ApiJgHistoryListPostRequest) Execute() (*JgHistoryListResponse, *http.Response, error) {
 	return r.ApiService.buildExecute(r)
 }
 
-func (r *ApiJgDataReportOfflineAccountPostRequest) WithLog(enable bool) *ApiJgDataReportOfflineAccountPostRequest {
+func (r *ApiJgHistoryListPostRequest) WithLog(enable bool) *ApiJgHistoryListPostRequest {
 	if enable {
 		r.ctx = context.WithValue(r.ctx, ContextEnableLog, true)
 	}
@@ -46,38 +46,38 @@ func (r *ApiJgDataReportOfflineAccountPostRequest) WithLog(enable bool) *ApiJgDa
 }
 
 /*
-JgDataReportOfflineAccountPost 账户层级离线报表数据
+JgHistoryListPost 历史操作记录
 
 
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiJgDataReportOfflineAccountPostRequest
+ @return ApiJgHistoryListPostRequest
 */
-func (a *JgDataReportOfflineAccountAPIService) Post(ctx context.Context) *ApiJgDataReportOfflineAccountPostRequest {
-	return &ApiJgDataReportOfflineAccountPostRequest{
+func (a *JgHistoryListAPIService) Post(ctx context.Context) *ApiJgHistoryListPostRequest {
+	return &ApiJgHistoryListPostRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return JgDataReportOfflineAccountResponse
-func (a *JgDataReportOfflineAccountAPIService) buildExecute(r *ApiJgDataReportOfflineAccountPostRequest) (*JgDataReportOfflineAccountResponse, *http.Response, error) {
+//  @return JgHistoryListResponse
+func (a *JgHistoryListAPIService) buildExecute(r *ApiJgHistoryListPostRequest) (*JgHistoryListResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []FormFile
-		localVarReturnValue  *JgDataReportOfflineAccountResponse
+		localVarReturnValue  *JgHistoryListResponse
 	)
 	
 	r.ctx = a.client.prepareCtx(r.ctx)
 
-	localBasePath, err := a.client.Cfg.ServerURLWithContext(r.ctx, "JgDataReportOfflineAccountAPIService.JgDataReportOfflineAccountPost")
+	localBasePath, err := a.client.Cfg.ServerURLWithContext(r.ctx, "JgHistoryListAPIService.JgHistoryListPost")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/jg/data/report/offline/account"
+	localVarPath := localBasePath + "/jg/history/list"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -101,7 +101,7 @@ func (a *JgDataReportOfflineAccountAPIService) buildExecute(r *ApiJgDataReportOf
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.jgDataReportOfflineAccountPostRequest
+	localVarPostBody = r.jgHistoryListPostRequest
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err

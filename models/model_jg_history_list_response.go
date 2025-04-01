@@ -10,15 +10,15 @@ API version: 1.0.0
 
 package models
 
-// JgDataReportOfflineAccountResponse struct for JgDataReportOfflineAccountResponse
-type JgDataReportOfflineAccountResponse struct {
-	RequestId *string `json:"request_id,omitempty"`
+// JgHistoryListResponse struct for JgHistoryListResponse
+type JgHistoryListResponse struct {
 	Code int64 `json:"code"`
 	Success bool `json:"success"`
 	Msg string `json:"msg"`
-	Data JgDataReportOfflineAccountResponseData `json:"data"`
+	RequestId *string `json:"request_id,omitempty"`
+	Data JgHistoryListResponseData `json:"data"`
 }
 
-type _JgDataReportOfflineAccountResponse JgDataReportOfflineAccountResponse
+type _JgHistoryListResponse JgHistoryListResponse
 
 
